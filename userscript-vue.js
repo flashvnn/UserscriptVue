@@ -21,7 +21,7 @@
   const createLogger = (console, tag) => Object.keys(console).map((k) => 
     [ k,(...args) =>DEBUG ? console[k](tag + ": " + args[0], ...args.slice(1)) : void 0,])
     .reduce((acc, [k, fn]) => ((acc[k] = fn), acc), {});
-  const logger = createLogger(console, "ShopeIo");
+  const logger = createLogger(console, "VueScript");
   const win = window;
   const div = win.document.createElement("div");
   win.document.body.appendChild(div);
