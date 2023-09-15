@@ -27,19 +27,19 @@
    	const div = win.document.createElement('div')
 	win.document.body.appendChild(div)
 
-const template = `
-<div id="app">
-  {{ message }}
-</div>
-`.slice(1)
-var app = new Vue({
-		data() {
-			return {
-				message: 'Hello Vue!'
-			}
-		},
-    template
-}).$mount(div)
+    const template = `
+    <div id="app">
+    {{ message }}
+    </div>
+    `.slice(1)
+    var app = new Vue({
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            },
+        template
+    }).$mount(div);
     logger.log(`App message: %s`, app.message)
     setInterval(function(){
     app.message = new Date().toString()
